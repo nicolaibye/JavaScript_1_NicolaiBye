@@ -1,7 +1,7 @@
 
 console.log("Hello world!");
 
-function createProduct(movie, parent) {
+export function createProduct(movie, parent) {
     
     const movieElement = document.createElement("div");
     movieElement.classList.add("film_product");
@@ -69,7 +69,6 @@ const movie = {
     price: "€10",
     href: "products/godzilla_kingofthemonsters_product.html",
     image: "images/covers/godzilla_kingofthemonsters_cover.jpg"
-
   };
 
 const article = document.querySelector(".library_films");
