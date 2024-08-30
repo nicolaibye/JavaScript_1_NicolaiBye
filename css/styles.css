@@ -45,6 +45,32 @@ a {
   color: #d9335b;
 }
 
+.message {
+  display: block;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.6rem;
+  font-weight: bold;
+  text-align: center;
+
+  &.error {
+    color: #d9335b;
+    outline: auto 2px #d9335b;
+    padding: 32px;
+  }
+
+  &.success {
+    color: #33d95c;
+    outline: auto 2px #33d95c;
+    padding: 32px;
+  }
+
+}
+
+
+
 /* nav */
 
 header {
@@ -509,9 +535,13 @@ div.featured_films_details ul li {
   z-index: -1;
 }
 
-div.film_info_block h2,
 div.film_info_block p {
   padding-bottom: 14px;
+}
+
+div.film_info_block h2 {
+  display: flex;
+  align-items: center;
 }
 
 div.film_info_block ul {
@@ -553,6 +583,10 @@ div.film_info_block ul li a {
 .film_product:hover {
   filter: drop-shadow(rgba(22, 0, 9, 0.247) 0rem 0rem 20px);
   z-index: 1;
+}
+
+.movie_title {
+  flex-basis: 100%;
 }
 
 #your_films_icons {
