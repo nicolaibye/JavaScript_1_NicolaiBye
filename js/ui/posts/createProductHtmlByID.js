@@ -3,70 +3,99 @@ export function createProductHtmlByID(container, product) {
   
     console.log("product", product);
   
-      const movieElement = document.createElement("div");
-      movieElement.classList.add("film_product");
-  
-      const movieImageLink = document.createElement("a");
-      movieImageLink.href = `productDetails.html?id=${product.id}`;
-      const movieImage = document.createElement("img");
-      movieImage.classList.add("section_films_cover");
-      movieImage.src = product.data.image.url;
-  
-      const movieInfoElement = document.createElement("div");
-      movieInfoElement.classList.add("film_info_block");
-  
-      const movieTitle = document.createElement("h2");
-      movieTitle.classList.add("movie_title");
-      movieTitle.textContent = product.data.title;
-  
-      const movieTags = document.createElement("p");
-      movieTags.classList.add("copyright_1");
-      movieTags.textContent = `${product.data.genre}  |  ${product.data.rating}  |  ${product.data.released}`;
-  
-      const movieDescription = document.createElement("p");
-      movieDescription.classList.add("copyright_1");
-      movieDescription.textContent = product.data.description;
-  
-      const moviePrice = document.createElement("h2");
-      moviePrice.textContent = "€" + 13;
-  
-      const movieButtonsElement = document.createElement("ul");
-      const movieButtonOne = document.createElement("li");
-      const movieButtonOneLink = document.createElement("a");
-      movieButtonOneLink.href = "wishlist.html";
-      const movieButtonOneIcon = document.createElement("i");
-      movieButtonOneIcon.classList.add("fa-solid", "fa-heart", "film_icons");
-      const movieButtonTwo = document.createElement("li");
-      const movieButtonTwoLink = document.createElement("a");
-      movieButtonTwoLink.href = "checkout/checkout.html";
-      const movieButtonTwoIcon = document.createElement("i");
-      movieButtonTwoIcon.classList.add("fa-solid", "fa-cart-plus", "film_icons");
-      const movieButtonThree = document.createElement("li");
-      const movieButtonThreeLink = document.createElement("a");
-      movieButtonThreeLink.href = `productDetails.html?id=${product.data.id}`;
-      const movieButtonThreeIcon = document.createElement("i");
-      movieButtonThreeIcon.classList.add("fa-solid", "fa-ellipsis", "film_icons");
-  
-      movieImageLink.append(movieImage);
-      movieButtonOneLink.append(movieButtonOneIcon);
-      movieButtonOne.append(movieButtonOneLink);
-      movieButtonTwoLink.append(movieButtonTwoIcon);
-      movieButtonTwo.append(movieButtonTwoLink);
-      movieButtonThreeLink.append(movieButtonThreeIcon);
-      movieButtonThree.append(movieButtonThreeLink);
-      movieButtonsElement.append(
-        movieButtonOne,
-        movieButtonTwo,
-        movieButtonThree
-      );
-      movieInfoElement.append(
-        movieTitle,
-        movieTags,
-        movieDescription,
-        moviePrice,
-        movieButtonsElement
-      );
-      movieElement.append(movieImageLink, movieInfoElement);
-      container.append(movieElement);
+    const backButton = document.createElement("button");
+    backButton.classList.add("product_return");
+    backButton.innerHTML = `<i class="fa-solid fa-chevron-left"></i>`;
+    backButton.addEventListener("click", () => {
+      window.history.back();
+    });
+    container.append(backButton);
+
+    const productDetailsContainer = document.createElement("div");
+    container.append(productDetailsContainer);
+
+    const productContainer = document.createElement("div");
+    productContainer.classList.add("product_container", `product_details_${product.data.id}`);
+    productDetailsContainer.append(productContainer);
+    
+    const productFilmsDetails = document.createElement("div");
+    productFilmsDetails.classList.add("product_films_details");
+    productContainer.append(productFilmsDetails);
+    
+    const productImage = document.createElement("img");
+    productImage.src = product.data.image.url;
+    productFilmsDetails.append(productImage);
+    
+    const productDetails = document.createElement("div");
+    productFilmsDetails.append(productDetails);
+    
+    const productTitle = document.createElement("h1");
+    productTitle.textContent = product.data.title;
+    productDetails.append(productTitle);
+    
+    const productTags = document.createElement("p");
+    productTags.classList.add("copyright_2");
+    productTags.textContent = `${product.data.genre}  |  ${product.data.rating}  |  ${product.data.released}`;
+    productDetails.append(productTags);
+    
+    const productDescription = document.createElement("p");
+    productDescription.textContent = product.data.description;
+    productDetails.append(productDescription);
+
+    const productKeyPeople = document.createElement("p");
+    productKeyPeople.classList.add("copyright_2");
+    productKeyPeople.textContent = `Director: Director HERE
+    <br>Manuscript: Manuscript HERE
+    <br>Cast: CAST HERE`;
+    productDetails.append(productKeyPeople);
+
+    const productPrice = document.createElement("h2");
+    productPrice.textContent = `€${product.data.price}`;
+    productDetails.append(productPrice);
+
+    const productButtons = document.createElement("ul");
+    productButtons.classList.add("product_buttons");
+    productDetails.append(productButtons);
+
+    const productButton1 = document.createElement("li");
+    productButton1.innerHTML = `<a href="../wishlist.html" class="button">Wishlist <i class="fa-solid fa-heart film_icons"></i></a>`;
+    productButtons.append(productButton1);
+
+    const productButton2 = document.createElement("li");
+    productButton2.innerHTML = `<a href="../checkout/checkout.html" class="button">Add to cart</a>`;
+    productButtons.append(productButton2);
+
+    const productButton3 = document.createElement("li");
+    productButton3.innerHTML = `<a href="#" class="button">Trailer</a>`;
+    productButtons.append(productButton3);
+
+    const backgroundTrailer = document.createElement("iframe");
+    backgroundTrailer.classList.add("youtube_trailer");
+    backgroundTrailer.src = `https://www.youtube.com/embed/AST2-4db4ic?start=1&end=149&autoplay=1&mute=1&loop=1&playlist=AST2-4db4ic`;
+    backgroundTrailer.allowFullscreen = true;
+    productDetailsContainer.append(backgroundTrailer);
   }
   
+  // <button onclick="history.back()" class="product_return"><i class="fa-solid fa-chevron-left"></i></button>
+  // <div>
+  //     <div class="product_container little_woman_product">
+  //         <div class="product_films_details">
+  //             <img src="../images/covers/little_woman_cover.jpg" alt="Little Women cover">
+  //             <div>
+  //                 <h1>Little Women</h1>
+  //                 <p class="copyright_2">Drama/Romance  |  A  |  2 h 15 m</p>
+  //                 <p>Jo March reflects back and forth on her life, telling the beloved story of the March sisters - four young women, each determined to live life on her own terms.</p>
+  //                 <p class="copyright_2">Director: Greta Gerwig
+  //                 <br>Manuscript: Greta Gerwig, Louisa May Alcott
+  //                 <br>Cast: Saoirse Ronan, Emma Watson, Florence Pugh</p>
+  //                 <h2>€10</h2>
+  //                 <ul>
+  //                     <li><a href="../wishlist.html" class="button">Wishlist <i class="fa-solid fa-heart film_icons"></i></a></li>
+  //                     <li><a href="../checkout/checkout.html" class="button">Add to cart</a></li>
+  //                     <li id="watch_trailer"><a href="#" class="button">Trailer</a></li>
+  //                 </ul>
+  //             </div>
+  //         </div>
+  //     </div>
+  //     <iframe src="https://www.youtube.com/embed/AST2-4db4ic?start=1&amp;end=149&autoplay=1&mute=1&loop=1&playlist=AST2-4db4ic" frameborder="0" allowfullscreen class=" youtube_trailer"></iframe>
+  // </div>

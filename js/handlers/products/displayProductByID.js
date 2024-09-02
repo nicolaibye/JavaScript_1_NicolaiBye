@@ -16,7 +16,7 @@ export async function displayProductByID() {
     window.location.href = "/";
   }
 
-  const container = document.querySelector(".jsTest");
+  const container = document.querySelector("#product_details");
 
   try {
     // if there is an id fetch product by id

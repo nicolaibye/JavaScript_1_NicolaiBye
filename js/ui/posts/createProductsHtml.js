@@ -15,6 +15,7 @@ export function createProductsHtml(container, products) {
 
     const movieInfoElement = document.createElement("div");
     movieInfoElement.classList.add("film_info_block");
+    movieInfoElement.classList.add(`productInfo_${product.id}`);
 
     const movieTitle = document.createElement("h2");
     movieTitle.classList.add("movie_title");

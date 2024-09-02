@@ -66,10 +66,7 @@ a {
     outline: auto 2px #33d95c;
     padding: 32px;
   }
-
 }
-
-
 
 /* nav */
 
@@ -995,6 +992,11 @@ div.film_info_block ul li a {
   margin-bottom: 25px;
 }
 
+.product_films_details > img {
+  width: auto;
+  height: 369px;
+}
+
 .youtube_trailer {
   height: 100%;
   width: 140%;
@@ -1034,69 +1036,19 @@ div.product_films_details ul li {
   display: none;
 }
 
-/* Godzilla */
+/* Gradient */
 
-.a_thousand_and_one_product {
+.product_details_04fd79ad-2612-4dab-b2ee-1320c4e5ccd1 {
   background: linear-gradient(
     180deg,
-    rgba(98, 92, 92, 0) 0%,
-    rgba(98, 92, 92, 1) 50%,
-    rgba(68, 65, 65, 1) 75%,
-    rgba(43, 42, 42, 1) 100%
+    rgba(246, 202, 115, 0) 0%,
+    rgba(36, 35, 45, 1) 50%,
+    rgba(131, 88, 85, 1) 75%,
+    rgba(230, 165, 119, 1) 100%
   );
 }
 
-.after_yang_product {
-  background: linear-gradient(
-    180deg,
-    rgba(41, 45, 29, 0) 0%,
-    rgba(109, 99, 64, 1) 50%,
-    rgba(142, 121, 81, 1) 75%,
-    rgba(207, 187, 134, 1) 100%
-  );
-}
-
-.all_of_us_strangers_product {
-  background: linear-gradient(
-    180deg,
-    rgba(198, 109, 166, 0) 0%,
-    rgba(198, 109, 166, 1) 50%,
-    rgba(199, 132, 175, 1) 75%,
-    rgba(236, 191, 220, 1) 100%
-  );
-}
-
-.candyman_product {
-  background: linear-gradient(
-    180deg,
-    rgba(166, 140, 0, 0) 0%,
-    rgba(166, 140, 0, 1) 50%,
-    rgba(208, 177, 8, 1) 75%,
-    rgba(239, 205, 19, 1) 100%
-  );
-}
-
-.earth_mama_product {
-  background: linear-gradient(
-    180deg,
-    rgba(176, 107, 137, 0) 0%,
-    rgba(176, 107, 137, 1) 50%,
-    rgba(199, 135, 163, 1) 75%,
-    rgba(235, 172, 206, 1) 100%
-  );
-}
-
-.godzilla_product {
-  background: linear-gradient(
-    180deg,
-    rgba(28, 38, 46, 0) 0%,
-    rgba(25, 73, 101, 1) 50%,
-    rgba(12, 108, 149, 1) 75%,
-    rgba(80, 189, 228, 1) 100%
-  );
-}
-
-.hobbs_and_shaw_product {
+.product_details_352ba432-5b5d-4ccc-9aba-f2704c500cf3 {
   background: linear-gradient(
     180deg,
     rgba(48, 49, 50, 0) 0%,
@@ -1106,107 +1058,37 @@ div.product_films_details ul li {
   );
 }
 
-.infinity_pool_product {
+.product_details_4696b9e6-ec6e-4672-a08d-3e3212a215c8 {
   background: linear-gradient(
     180deg,
-    rgba(150, 14, 19, 0) 0%,
-    rgba(150, 14, 19, 1) 50%,
-    rgba(187, 26, 32, 1) 75%,
-    rgba(219, 43, 50, 1) 100%
+    rgba(28, 38, 46, 0) 0%,
+    rgba(25, 73, 101, 1) 50%,
+    rgba(12, 108, 149, 1) 75%,
+    rgba(80, 189, 228, 1) 100%
   );
 }
 
-.little_woman_product {
+.product_details_581f13b2-3ca4-494e-be7c-bb51fbc320f4 {
   background: linear-gradient(
     180deg,
-    rgba(156, 136, 92, 0) 0%,
-    rgba(156, 136, 92, 1) 50%,
-    rgba(190, 172, 131, 1) 75%,
-    rgba(210, 191, 165, 1) 100%
+    rgba(32, 17, 28, 0) 0%,
+    rgba(45, 48, 57, 1) 50%,
+    rgba(48, 72, 78, 1) 75%,
+    rgba(99, 148, 143, 1) 100%
   );
 }
 
-.mandy_product {
+.product_details_6c8fbbac-b0b7-42d9-a01b-cce95c99bdee {
   background: linear-gradient(
     180deg,
-    rgba(123, 29, 134, 0) 0%,
-    rgba(123, 29, 134, 1) 50%,
-    rgba(198, 68, 163, 1) 75%,
-    rgba(245, 110, 208, 1) 100%
+    rgba(29, 6, 0, 0) 0%,
+    rgba(135, 30, 1, 1) 50%,
+    rgba(255, 103, 4, 1) 75%,
+    rgba(255, 233, 58, 1) 100%
   );
 }
 
-.nope_product {
-  background: linear-gradient(
-    180deg,
-    rgba(4, 30, 86, 0) 0%,
-    rgba(4, 30, 86, 1) 50%,
-    rgba(9, 45, 124, 1) 75%,
-    rgba(27, 73, 172, 1) 100%
-  );
-}
-
-.once_upon_hollywood_product {
-  background: linear-gradient(
-    180deg,
-    rgba(190, 49, 36, 0) 0%,
-    rgba(190, 49, 36, 1) 50%,
-    rgba(244, 96, 65, 1) 75%,
-    rgba(249, 171, 96, 1) 100%
-  );
-}
-
-.passages_product {
-  background: linear-gradient(
-    180deg,
-    rgba(153, 127, 79, 0) 0%,
-    rgba(153, 127, 79, 1) 50%,
-    rgba(189, 158, 102, 1) 75%,
-    rgba(224, 191, 129, 1) 100%
-  );
-}
-
-.past_lives_product {
-  background: linear-gradient(
-    180deg,
-    rgba(75, 106, 135, 0) 0%,
-    rgba(75, 106, 135, 1) 50%,
-    rgba(109, 131, 142, 1) 75%,
-    rgba(172, 170, 152, 1) 100%
-  );
-}
-
-.scrapper_product {
-  background: linear-gradient(
-    180deg,
-    rgba(186, 147, 1, 0) 0%,
-    rgba(186, 147, 1, 1) 50%,
-    rgba(221, 181, 37, 1) 75%,
-    rgba(241, 207, 83, 1) 100%
-  );
-}
-
-.scream_5_product {
-  background: linear-gradient(
-    180deg,
-    rgba(7, 39, 49, 0) 0%,
-    rgba(7, 39, 49, 1) 50%,
-    rgba(12, 68, 85, 1) 75%,
-    rgba(68, 137, 149, 1) 100%
-  );
-}
-
-.the_addams_product {
-  background: linear-gradient(
-    180deg,
-    rgba(124, 75, 49, 0) 0%,
-    rgba(124, 75, 49, 1) 50%,
-    rgba(150, 99, 59, 1) 75%,
-    rgba(177, 130, 105, 1) 100%
-  );
-}
-
-.the_batman_product {
+.product_details_972df6d3-b4e8-44c1-9dec-cadd3b35102e {
   background: linear-gradient(
     180deg,
     rgba(84, 24, 12, 0) 0%,
@@ -1216,33 +1098,63 @@ div.product_films_details ul li {
   );
 }
 
-.theater_camp_product {
+.product_details_a7e81b82-d2e5-4288-b700-889186a7da0e {
   background: linear-gradient(
     180deg,
-    rgba(67, 92, 54, 0) 0%,
-    rgba(67, 92, 54, 1) 50%,
-    rgba(106, 135, 92, 1) 75%,
-    rgba(132, 162, 104, 1) 100%
+    rgba(190, 49, 36, 0) 0%,
+    rgba(190, 49, 36, 1) 50%,
+    rgba(244, 96, 65, 1) 75%,
+    rgba(249, 171, 96, 1) 100%
   );
 }
 
-.titane_product {
+.product_details_a969a4b4-a4d0-4dd5-99e5-86ae0a8eee43 {
   background: linear-gradient(
     180deg,
-    rgba(31, 52, 119, 0) 0%,
-    rgba(31, 52, 119, 1) 50%,
-    rgba(36, 61, 141, 1) 75%,
-    rgba(56, 84, 173, 1) 100%
+    rgba(124, 75, 49, 0) 0%,
+    rgba(124, 75, 49, 1) 50%,
+    rgba(150, 99, 59, 1) 75%,
+    rgba(177, 130, 105, 1) 100%
   );
 }
 
-.toy_story_product {
+.product_details_ad063e58-bc89-46bf-ac45-16760bc883c7 {
   background: linear-gradient(
     180deg,
-    rgba(172, 143, 0, 0) 0%,
-    rgba(172, 143, 0, 1) 50%,
-    rgba(233, 194, 0, 1) 85%,
-    rgba(238, 210, 53, 1) 100%
+    rgba(7, 39, 49, 0) 0%,
+    rgba(7, 39, 49, 1) 50%,
+    rgba(12, 68, 85, 1) 75%,
+    rgba(68, 137, 149, 1) 100%
+  );
+}
+
+.product_details_b9e4edb1-e798-45e3-9c46-f7cd75b9326f {
+  background: linear-gradient(
+    180deg,
+    rgba(17, 15, 12, 0) 0%,
+    rgba(42, 36, 98, 1) 50%,
+    rgba(56, 56, 143, 1) 75%,
+    rgba(131, 128, 184, 1) 100%
+  );
+}
+
+.product_details_d5c5c3e0-07da-406a-b3db-8336c40c5ae7 {
+  background: linear-gradient(
+    180deg,
+    rgba(4, 18, 13, 0) 0%,
+    rgba(23, 59, 47, 1) 50%,
+    rgb(55, 121, 99) 75%,
+    rgba(123, 221, 188, 1) 100%
+  );
+}
+
+.product_details_f40421d4-0977-4a78-8e47-bacd7a188381 {
+  background: linear-gradient(
+    180deg,
+    rgba(150, 14, 19, 0) 0%,
+    rgba(150, 14, 19, 1) 50%,
+    rgba(187, 26, 32, 1) 75%,
+    rgba(219, 43, 50, 1) 100%
   );
 }
 
@@ -1393,84 +1305,52 @@ div.film_info_block ul li:hover {
 
 /* Info boxes colors */
 
-.toy_story_info {
-  background-color: #ffea8a;
+.productInfo_04fd79ad-2612-4dab-b2ee-1320c4e5ccd1 {
+  background-color: #e8ad73;
 }
 
-.batman_info {
-  background-color: #f7cf73;
-}
-
-.addams_family_info {
-  background-color: #e3ad90;
-}
-
-.hobbs_info {
+.productInfo_352ba432-5b5d-4ccc-9aba-f2704c500cf3 {
   background-color: #c9cfd0;
 }
 
-.scream_info {
-  background-color: #b3dae1;
+.productInfo_4696b9e6-ec6e-4672-a08d-3e3212a215c8 {
+  background-color: #60c6e9;
 }
 
-.hollywood_info {
+.productInfo_581f13b2-3ca4-494e-be7c-bb51fbc320f4 {
+  background-color: #b5c9bc;
+}
+
+.productInfo_6c8fbbac-b0b7-42d9-a01b-cce95c99bdee {
+  background-color: #f7cf73;
+}
+
+.productInfo_972df6d3-b4e8-44c1-9dec-cadd3b35102e {
+  background-color: #f7cf73;
+}
+
+.productInfo_a7e81b82-d2e5-4288-b700-889186a7da0e {
   background-color: #f2b173;
 }
 
-.strangers_info {
-  background-color: #ecbfdc;
+.productInfo_a969a4b4-a4d0-4dd5-99e5-86ae0a8eee43 {
+  background-color: #e3ad90;
 }
 
-.thousand_info {
-  background-color: #d2ced1;
+.productInfo_ad063e58-bc89-46bf-ac45-16760bc883c7 {
+  background-color: #b3dae1;
 }
 
-.theater_camp_info {
-  background-color: #bbd38d;
+.productInfo_b9e4edb1-e798-45e3-9c46-f7cd75b9326f {
+  background-color: #a085df;
 }
 
-.past_lives_info {
-  background-color: #d4e6db;
+.productInfo_d5c5c3e0-07da-406a-b3db-8336c40c5ae7 {
+  background-color: #7bddbc;
 }
 
-.scrapper_info {
-  background-color: #ffe897;
-}
-
-.earthmama_info {
-  background-color: #f9cbe4;
-}
-
-.passages_info {
-  background-color: #fff6e5;
-}
-
-.after_yang_info {
-  background-color: #f6e1bc;
-}
-
-.titane_info {
-  background-color: #cde0ff;
-}
-
-.nope_info {
-  background-color: #75a9ff;
-}
-
-.candyman_info {
-  background-color: #fce05c;
-}
-
-.mandy_info {
-  background-color: #fface3;
-}
-
-.little_woman_info {
-  background-color: #fff7ed;
-}
-
-.infinity_info {
-  background-color: #ff8989;
+.productInfo_f40421d4-0977-4a78-8e47-bacd7a188381 {
+  background-color: #ff7373;
 }
 
 /* Tablet */
