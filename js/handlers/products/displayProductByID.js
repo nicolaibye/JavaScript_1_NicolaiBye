@@ -2,6 +2,7 @@ import { fetchProductByID } from "../../api/products/fetchProductByID.js";
 import { displayMessage } from "../../ui/common/displayMessage.js";
 import { createProductHtmlByID } from "../../ui/posts/createProductHtmlByID.js";
 import { getQueryParam } from "../../utils/getQueryParam.js";
+import { trailerLinks } from "../../constants/trailerLinks.js";
 
 export async function displayProductByID() {
   // get product id from url
@@ -21,7 +22,15 @@ export async function displayProductByID() {
   try {
     // if there is an id fetch product by id
     const product = await fetchProductByID(id);
-    // create html for product (THIS WILL TAKE TIME, but placeholder for now while following the video)
+
+    let matchingMovie = trailerLinks.find(
+      (idTrailer) => idTrailer.id === product.data.id
+    );
+
+    if (matchingMovie) {
+      product.trailerLink = matchingMovie.trailerLink;
+    }
+
     createProductHtmlByID(container, product);
   } catch (error) {
     console.error(error);
