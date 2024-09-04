@@ -1,3 +1,5 @@
+import { isIdInCart } from "../../utils/cart.js";
+
 export function createProductHtmlByID(container, product) {
   container.innerHTML = "";
 
@@ -65,8 +67,22 @@ export function createProductHtmlByID(container, product) {
   productButtons.append(productButton1);
 
   const productButton2 = document.createElement("li");
-  productButton2.innerHTML = `<a href="../checkout/checkout.html" class="button">Add to cart</a>`;
+  productButton2.textContent = "Add to cart";
+  productButton2.classList.add("button");
+  productButton2.id = "cart_icon";
+  productButton2.dataset.id = id;
+  productButton2.dataset.title = title;
+  productButton2.dataset.genre = genre;
+  productButton2.dataset.rating = rating;
+  productButton2.dataset.released = released;
+  productButton2.dataset.price = price;
   productButtons.append(productButton2);
+
+  if (isIdInCart(id)) {
+    productButton2.classList.add("active");
+   } else {
+    productButton2.classList.add("inactive");
+  }
 
   const productButton3 = document.createElement("li");
   productButton3.innerHTML = `<a href="#" class="button">Trailer</a>`;

@@ -1,5 +1,6 @@
 import { displayProducts } from "./handlers/products/displayProducts.js";
 import { displayProductByID } from "./handlers/products/displayProductByID.js";
+import { displayCart } from "./handlers/cart/displayCart.js";
 
 function router() {
   const { pathname } = window.location;
@@ -16,6 +17,8 @@ function router() {
     case "/productDetails.html":
       displayProductByID();
       break;
+      case "/checkout/checkout_js.html":
+        displayCart();
   }
 }
 

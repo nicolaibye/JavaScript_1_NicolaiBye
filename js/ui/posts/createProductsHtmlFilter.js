@@ -41,7 +41,7 @@ export function createProductsHtmlFilter(container, products) {
     movieDescription.textContent = description;
 
     const moviePrice = document.createElement("h2");
-    moviePrice.textContent = "€" + 13;
+    moviePrice.textContent = price;
 
     const movieButtonsElement = document.createElement("ul");
     const movieButtonOne = document.createElement("li");
@@ -49,11 +49,21 @@ export function createProductsHtmlFilter(container, products) {
     movieButtonOneLink.href = "wishlist.html";
     const movieButtonOneIcon = document.createElement("i");
     movieButtonOneIcon.classList.add("fa-solid", "fa-heart", "film_icons");
+    
+    
     const movieButtonTwo = document.createElement("li");
     const movieButtonTwoLink = document.createElement("a");
-    movieButtonTwoLink.href = "checkout/checkout.html";
+    movieButtonTwoLink.id = "cart_icon";
+    movieButtonTwoLink.dataset.id = id;
+    movieButtonTwoLink.dataset.title = title;
+    movieButtonTwoLink.dataset.genre = genre;
+    movieButtonTwoLink.dataset.rating = rating;
+    movieButtonTwoLink.dataset.released = released;
+    movieButtonTwoLink.dataset.price = price;
     const movieButtonTwoIcon = document.createElement("i");
     movieButtonTwoIcon.classList.add("fa-solid", "fa-cart-plus", "film_icons");
+    
+    
     const movieButtonThree = document.createElement("li");
     const movieButtonThreeLink = document.createElement("a");
     movieButtonThreeLink.href = `productDetails.html?id=${id}`;

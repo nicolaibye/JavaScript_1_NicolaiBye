@@ -48,7 +48,7 @@ a {
 .message {
   display: block;
   position: absolute;
-  top: 50vh;
+  top: 35vh;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3.6rem;
@@ -62,8 +62,14 @@ a {
   }
 
   &.success {
-    color: #33d95c;
-    outline: auto 2px #33d95c;
+    color: #0BDEB8;
+    outline: auto 2px #0BDEB8;
+    padding: 32px;
+  }
+
+  &.warning {
+    color: #4A88FF;
+    outline: auto 2px #4A88FF;
     padding: 32px;
   }
 }
@@ -114,6 +120,11 @@ nav {
   padding: 0rem 5rem;
   height: 65px;
   width: 100%;
+}
+
+.active {
+  color: #d9335b;
+  background-color: #d9335b;
 }
 
 .nav-active {
@@ -1271,6 +1282,7 @@ div.product_films_details ul li:hover,
 div.film_info_block ul li:hover {
   background-color: #d9335b;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 /* Icons */

@@ -3,6 +3,7 @@ import { displayMessage } from "../../ui/common/displayMessage.js";
 import { createProductHtmlByID } from "../../ui/posts/createProductHtmlByID.js";
 import { getQueryParam } from "../../utils/getQueryParam.js";
 import { trailerLinks } from "../../constants/trailerLinks.js";
+import { handleCartIconClick } from "../cart/handleCartIconClick.js";
 
 export async function displayProductByID() {
   // get product id from url
@@ -32,6 +33,7 @@ export async function displayProductByID() {
     }
 
     createProductHtmlByID(container, product);
+    handleCartIconClick();
   } catch (error) {
     console.error(error);
     displayMessage(container, "error", error.message);
