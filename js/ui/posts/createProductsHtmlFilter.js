@@ -1,15 +1,19 @@
 export function createProductsHtmlFilter(container, products) {
-
   let parent = container;
   if (typeof container === "string") {
     parent = document.querySelector(container);
   }
 
-  parent.innerHTML = "";
-  
-  products.forEach((product) => {
+  if (products.length === 0) {
+    parent.innerHTML = `<p class="message error">No products matches your search</p>`;
+    return;
+  }
 
-    const { id, title, image, description, genre, rating, released, price } = product;
+  parent.innerHTML = "";
+
+  products.forEach((product) => {
+    const { id, title, image, description, genre, rating, released, price } =
+      product;
 
     const movieElement = document.createElement("div");
     movieElement.classList.add("film_product");

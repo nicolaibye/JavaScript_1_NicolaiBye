@@ -14,7 +14,7 @@ export function filterProducts(products) {
 
     const filterProducts = products.data.filter((product) => {
       if (
-        product.title.toLowerCase().startsWith(filterValue) ||
+        product.title.toLowerCase().includes(filterValue) ||
         product.genre.toLowerCase().includes(filterValue) ||
         product.rating.toLowerCase().startsWith(filterValue)
       ) {
