@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/dd4a452c26.js" crossorigin="anonymous"></script>
+    <script src="/js/scripts.js" type="module" defer></script>
     <title>SquareEyes | Cart</title>
 </head>
 <body>
@@ -29,13 +30,6 @@
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../library.html">Library</a></li>
-                    <input type="checkbox" id="genre_checkbox">
-                    <label for="genre_checkbox">Genre</label>
-                        <ul class="genre_dropdown">
-                            <li><a href="../genre/genre_action.html">Action</a></li>
-                            <li><a href="../genre/genre_fantasy.html">Fantasy</a></li>
-                            <li><a href="../genre/genre_thriller.html">Thriller</a></li>
-                        </ul>
                     <li><a href="../about.html">About</a></li>
                     <li><a href="../contact.html">Contact</a></li>
                 </ul>
@@ -43,7 +37,9 @@
             <section class="right_header">
                 <ul>
                     <li><a href="../wishlist.html"><i class="fa-solid fa-heart" id="icon_wishlist"></i><span class="nav_wishlist">Wishlist</span></a></li>
-                    <li><a href="../checkout/checkout.html"><i class="fa-solid fa-cart-shopping nav-icon-active" id="icon_checkout"></i><span class="nav_checkout nav-active">Checkout</span></a></li>
+                    <li><a href="../checkout/checkout.html"><i class="fa-solid fa-cart-shopping nav-icon-active" id="icon_checkout"></i><span class="nav_checkout nav-active">Checkout</span></a>
+                    <span id="cart_amount" class="cart_amount"></span>
+                    </li>
                     <input type="checkbox" id="profile_checkbox">
                     <label for="profile_checkbox" class="profile_icon"><i class="fa-solid fa-user" id="icon_profile"></i><span class="nav_profile">Profile</span></label>
                         <ul class="profile_dropdown">
@@ -61,69 +57,13 @@
         <section class="library_main checkout_main">
             <div class="checkout_main_grid">
                 <h1 class="hyper_header">Checkout</h1>
-                <p class="infotext checkout_amount_product">Amount</p>
                 <p class="infotext checkout_single_price_product">Price</p>
             </div>
 
-            <div class="checkout_main_grid">
-                <hr>
-                <div class="checkout_overview_product">
-                    <img src="../images/covers/godzilla_kingofthemonsters_cover.jpg" alt="Godzilla: King of the Monsters cover" class="checkout_picture">
-                    <div class="checkout_details_product">
-                        <h2 class="pink_color">40% sale</h2>
-                        <h2>Godzilla: King of the Monsters</h2>
-                        <p>Sci-Fi/Action  |  12+  |  2 h 12 m</p>
-                        <p class="copyright_2">Online code</p>
-                    </div>
-                    <div class="counter checkout_amount_product">
-                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                        <input type="text" value="1">
-                        <span class="up" onClick='increaseCount(event, this)'>+</span>
-                    </div>
-                    <h2 class="checkout_single_price_product pink_color">€6</h2>
-                    <h2 class="checkout_total_price_product pink_color">€6</h2>
-                </div>
-                <hr>
-                <div class="checkout_overview_product">
-                    <img src="../images/covers/all_of_us_strangers_cover.jpg" alt="All of Us Strangers cover" class="checkout_picture">
-                    <div class="checkout_details_product">
-                        <h2>All of Us Strangers</h2>
-                        <p>Romance  |  12+  |  1 h 45 m</p>
-                        <p class="copyright_2">Online code</p>
-                    </div>
-                    <div class="counter checkout_amount_product">
-                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                        <input type="text" value="2">
-                        <span class="up" onClick='increaseCount(event, this)'>+</span>
-                    </div>
-                    <h2 class="checkout_single_price_product">€10</h2>
-                    <h2 class="checkout_total_price_product">€20</h2>
-                </div>    
-                <hr>
-                <div class="checkout_overview_product">
-                    <img src="../images/covers/after_yang_cover.png" alt="After Yang cover" class="checkout_picture">
-                    <div class="checkout_details_product">
-                        <h2>After Yang</h2>
-                        <p>Drama/Sci-Fi  |  9  |  1 h 36 m</p>
-                        <p class="copyright_2">Online code</p>
-                    </div>
-                    <div class="counter checkout_amount_product">
-                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
-                        <input type="text" value="1">
-                        <span class="up" onClick='increaseCount(event, this)'>+</span>
-                    </div>
-                    <h2 class="checkout_single_price_product">€10</h2>
-                    <h2 class="checkout_total_price_product">€10</h2>
-                </div>
-                <hr>     
+            <div id="cart_container" class="checkout_main_grid">
+                
             </div>
-            <div class="checkout_main_grid checkout_line">
-                <p class="checkout_amount_text_product">Items</p>
-                <p class="checkout_amount_product">4</p>
-                <p class="checkout_single_price_product">Total</p>
-                <h2 class="checkout_total_price_product">€36</h2>
-                <a href="../checkout/checkout_shipping.html" class="cta checkout_cta">checkout</a>
-            </div>
+
         </section>
 
     </main>

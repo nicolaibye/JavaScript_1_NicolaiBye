@@ -1,5 +1,4 @@
 import { createProductsHtml } from "../../ui/posts/createProductsHtml.js";
-import { createProductsHtmlFilter } from "../../ui/posts/createProductsHtmlFilter.js";
 
 export function filterProducts(products) {
   const searchInput = document.querySelector("#your_films_search");
@@ -21,7 +20,8 @@ export function filterProducts(products) {
         return true;
       }
     });
-    console.log(filterProducts);
-    createProductsHtmlFilter(".library_films", filterProducts);
+
+    let wrappedFilterProducts = { data: filterProducts };
+    createProductsHtml(".library_films", wrappedFilterProducts);
   }
 }

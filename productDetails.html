@@ -51,13 +51,6 @@
           <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../library.html" class="nav-active">Library</a></li>
-            <input type="checkbox" id="genre_checkbox" />
-            <label for="genre_checkbox">Genre</label>
-            <ul class="genre_dropdown">
-              <li><a href="../genre/genre_action.html">Action</a></li>
-              <li><a href="../genre/genre_fantasy.html">Fantasy</a></li>
-              <li><a href="../genre/genre_thriller.html">Thriller</a></li>
-            </ul>
             <li><a href="../about.html">About</a></li>
             <li><a href="../contact.html">Contact</a></li>
           </ul>
@@ -71,10 +64,11 @@
               >
             </li>
             <li>
-              <a href="checkout/checkout_js.html"
+              <a href="checkout/checkout.html"
                 ><i class="fa-solid fa-cart-shopping" id="icon_checkout"></i
                 ><span class="nav_checkout">Checkout</span></a
               >
+              <span id="cart_amount" class="cart_amount"></span>
             </li>
             <input type="checkbox" id="profile_checkbox" />
             <label for="profile_checkbox" class="profile_icon"
@@ -93,7 +87,9 @@
 
     <main>
       <section id="product_details">
-        <p>Loading...</p>
+        <div>
+          <span class="loader"></span>
+        </div>
       </section>
     </main>
 

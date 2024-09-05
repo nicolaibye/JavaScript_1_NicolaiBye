@@ -13,8 +13,8 @@ export function isIdInCart(id) {
     return cart.some((product) => String(product.id) === String(id));
 }
 
-export function addToCart(id, title, genre, rating, released, price) {
-    const newProduct = { id, title, genre, rating, released, price };
+export function addToCart(id, title, image, genre, rating, released, price) {
+    const newProduct = { id, title, image, genre, rating, released, price };
     const cart = getCart();
     cart.push(newProduct);
     saveToCart(cart);
@@ -32,6 +32,9 @@ export function clearCart() {
 }
 
 export function getTotalPrice(cart) {
-    const total = cart.reduce((accumulator, cart) => accumulator + cart.price, 0); 
+    const total = cart.reduce((accumulator, cartItem) => {
+        return accumulator + Number(cartItem.price); // Ensure price is treated as a number
+    }, 0);
+    
     return total;
-  }
+}

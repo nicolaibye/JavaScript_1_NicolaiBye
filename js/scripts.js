@@ -11,13 +11,13 @@ function router() {
     case "/":
     case "/index.html":
       break;
-    case "/js_testing.html":
+    case "/library.html":
       displayProducts();
       break;
     case "/productDetails.html":
       displayProductByID();
       break;
-      case "/checkout/checkout_js.html":
+      case "/checkout/checkout.html":
         displayCart();
   }
 }

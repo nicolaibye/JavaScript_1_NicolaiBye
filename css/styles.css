@@ -62,14 +62,14 @@ a {
   }
 
   &.success {
-    color: #0BDEB8;
-    outline: auto 2px #0BDEB8;
+    color: #0bdeb8;
+    outline: auto 2px #0bdeb8;
     padding: 32px;
   }
 
   &.warning {
-    color: #4A88FF;
-    outline: auto 2px #4A88FF;
+    color: #4a88ff;
+    outline: auto 2px #4a88ff;
     padding: 32px;
   }
 }
@@ -180,6 +180,21 @@ nav,
 .nav_wishlist,
 .nav_checkout,
 .nav_profile {
+  display: none;
+}
+
+.cart_amount {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 12px;
+  right: 94px;
+  background-color: #ff4773;
+  border: #221c1e solid 2px;
+  color: #221c1e;
+  padding: 0px 4px;
+  border-radius: 50%;
   display: none;
 }
 
@@ -531,7 +546,7 @@ div.featured_films_details ul li {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-content: space-around;
   height: 246px;
   width: 236px;
   padding: 16px;
@@ -561,18 +576,19 @@ div.film_info_block ul {
 div.film_info_block ul li {
   display: flex;
   box-sizing: border-box;
+  margin-right: 20px;
+}
+
+div.film_info_block ul li a {
+  display: flex;
+  color: #000;
+  padding: 8px;
   justify-content: center;
   align-items: center;
   width: 32px;
   height: 32px;
-  margin-right: 20px;
   border-radius: 5px;
   border: 1px solid rgb(0, 0, 0);
-}
-
-div.film_info_block ul li a {
-  color: #000;
-  padding: 8px;
 }
 
 .film_product > div {
@@ -686,6 +702,39 @@ div.film_info_block ul li a {
   margin: 30px 0px 30px 0px;
 }
 
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #221c1e;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-bottom-color: #ff4773;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Contact page */
 
 .contact_main {
@@ -761,6 +810,7 @@ div.film_info_block ul li a {
 
 .checkout_single_price_product {
   grid-column-start: 10;
+  text-align: center;
 }
 
 .checkout_total_price_product {
@@ -769,10 +819,28 @@ div.film_info_block ul li a {
 
 .checkout_cta {
   grid-column: 10 / span 2;
+  margin-top: 15px;
 }
 
 .checkout_line * {
   padding: 16px 0px 16px 0px;
+}
+
+.remove_button {
+  grid-column-start: 11;
+  font-size: 1.3rem;
+  font-weight: 700;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff477200;
+  border-color: #221c1e;
+  border-style: solid;
+  cursor: pointer;
 }
 
 /* Checkout shipping */
@@ -1019,13 +1087,7 @@ div.film_info_block ul li a {
 div.product_films_details ul li {
   display: inline-flex;
   box-sizing: border-box;
-  width: 128px;
-  height: 32px;
   margin-right: 36px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid rgb(255, 255, 255);
 }
 
 .product_return {
@@ -1230,6 +1292,7 @@ textarea {
 
 .hyper_header {
   font-size: 3.8rem;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -1262,6 +1325,7 @@ h2 {
 }
 
 .button {
+  display: flex;
   color: #fff;
   text-decoration: none;
   text-align: center;
@@ -1272,13 +1336,19 @@ h2 {
   line-height: normal;
   letter-spacing: 0.66px;
   text-transform: uppercase;
+  width: 128px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
 }
 
 div.featured_films_details ul li:hover,
 div.product_films_details ul li:hover,
 .cta_contact:hover,
 .cta:hover,
-div.film_info_block ul li:hover {
+div.film_info_block ul li a:hover {
   background-color: #d9335b;
   transition-duration: 0.5s;
   cursor: pointer;
@@ -1312,11 +1382,6 @@ div.film_info_block ul li:hover {
 
 .footer_icon {
   font-size: 2.4rem;
-}
-
-div.film_info_block ul li i {
-  padding-left: 22%;
-  width: 30px;
 }
 
 /* Info boxes colors */
@@ -1576,7 +1641,8 @@ div.film_info_block ul li i {
 
   #icon_wishlist,
   #icon_checkout,
-  #icon_profile {
+  #icon_profile,
+  .cart_amount {
     display: none;
   }
 }

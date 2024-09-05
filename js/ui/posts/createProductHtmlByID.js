@@ -28,6 +28,7 @@ export function createProductHtmlByID(container, product) {
   productContainer.append(productFilmsDetails);
 
   const productImage = document.createElement("img");
+  productImage.alt = `${title} cover`;
   productImage.src = image.url;
   productFilmsDetails.append(productImage);
 
@@ -55,7 +56,7 @@ export function createProductHtmlByID(container, product) {
   productDetails.append(productKeyPeople);
 
   const productPrice = document.createElement("h2");
-  productPrice.textContent = `€${price}`;
+  productPrice.textContent = "€" + Math.round(price * 0.085);
   productDetails.append(productPrice);
 
   const productButtons = document.createElement("ul");
@@ -67,15 +68,18 @@ export function createProductHtmlByID(container, product) {
   productButtons.append(productButton1);
 
   const productButton2 = document.createElement("li");
-  productButton2.textContent = "Add to cart";
-  productButton2.classList.add("button");
-  productButton2.dataset.action = "cart";
-  productButton2.dataset.id = id;
-  productButton2.dataset.title = title;
-  productButton2.dataset.genre = genre;
-  productButton2.dataset.rating = rating;
-  productButton2.dataset.released = released;
-  productButton2.dataset.price = price;
+  const productButton2Link = document.createElement("a");
+  productButton2Link.textContent = "Add to cart";
+  productButton2Link.classList.add("button");
+  productButton2Link.dataset.action = "cart";
+  productButton2Link.dataset.id = id;
+  productButton2Link.dataset.title = title;
+  productButton2Link.dataset.image = image.url;
+  productButton2Link.dataset.genre = genre;
+  productButton2Link.dataset.rating = rating;
+  productButton2Link.dataset.released = released;
+  productButton2Link.dataset.price = price;
+  productButton2.append(productButton2Link);
   productButtons.append(productButton2);
 
   if (isIdInCart(id)) {
