@@ -52,14 +52,13 @@ export function createProductsHtmlFilter(container, products) {
     
     
     const movieButtonTwo = document.createElement("li");
-    const movieButtonTwoLink = document.createElement("a");
-    movieButtonTwoLink.id = "cart_icon";
-    movieButtonTwoLink.dataset.id = id;
-    movieButtonTwoLink.dataset.title = title;
-    movieButtonTwoLink.dataset.genre = genre;
-    movieButtonTwoLink.dataset.rating = rating;
-    movieButtonTwoLink.dataset.released = released;
-    movieButtonTwoLink.dataset.price = price;
+    movieButtonTwo.dataset.action = "cart";
+    movieButtonTwo.dataset.id = id;
+    movieButtonTwo.dataset.title = title;
+    movieButtonTwo.dataset.genre = genre;
+    movieButtonTwo.dataset.rating = rating;
+    movieButtonTwo.dataset.released = released;
+    movieButtonTwo.dataset.price = price;
     const movieButtonTwoIcon = document.createElement("i");
     movieButtonTwoIcon.classList.add("fa-solid", "fa-cart-plus", "film_icons");
     
@@ -73,8 +72,7 @@ export function createProductsHtmlFilter(container, products) {
     movieImageLink.append(movieImage);
     movieButtonOneLink.append(movieButtonOneIcon);
     movieButtonOne.append(movieButtonOneLink);
-    movieButtonTwoLink.append(movieButtonTwoIcon);
-    movieButtonTwo.append(movieButtonTwoLink);
+    movieButtonTwo.append(movieButtonTwoIcon);
     movieButtonThreeLink.append(movieButtonThreeIcon);
     movieButtonThree.append(movieButtonThreeLink);
     movieButtonsElement.append(

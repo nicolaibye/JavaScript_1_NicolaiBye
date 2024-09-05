@@ -123,7 +123,6 @@ nav {
 }
 
 .active {
-  color: #d9335b;
   background-color: #d9335b;
 }
 
@@ -1313,6 +1312,11 @@ div.film_info_block ul li:hover {
 
 .footer_icon {
   font-size: 2.4rem;
+}
+
+div.film_info_block ul li i {
+  padding-left: 22%;
+  width: 30px;
 }
 
 /* Info boxes colors */

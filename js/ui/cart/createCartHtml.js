@@ -14,7 +14,14 @@ export function createCartHtml(container, cart) {
 
     const titleElement = document.createElement("h4");
     titleElement.textContent = title;
+
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "x";
+    removeButton.dataset.action = "remove";
+    removeButton.dataset.id = id;
+
     cartProductContainer.append(titleElement);
+    cartProductContainer.append(removeButton);
     container.append(cartProductContainer);
   });
   // else display cart

@@ -69,7 +69,7 @@ export function createProductHtmlByID(container, product) {
   const productButton2 = document.createElement("li");
   productButton2.textContent = "Add to cart";
   productButton2.classList.add("button");
-  productButton2.id = "cart_icon";
+  productButton2.dataset.action = "cart";
   productButton2.dataset.id = id;
   productButton2.dataset.title = title;
   productButton2.dataset.genre = genre;
