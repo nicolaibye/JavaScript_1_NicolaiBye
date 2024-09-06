@@ -10,8 +10,6 @@ export async function displayProductByID() {
 
   const id = getQueryParam("id");
 
-  console.log(id);
-
   // if no id redirect to index
 
   if (!id) {

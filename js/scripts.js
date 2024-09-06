@@ -2,11 +2,10 @@ import { displayProducts } from "./handlers/products/displayProducts.js";
 import { displayProductByID } from "./handlers/products/displayProductByID.js";
 import { displayCart } from "./handlers/cart/displayCart.js";
 import { displayProductsHome } from "./handlers/products/displayProductsHome.js";
+import { handleCartCountDisplay } from "./handlers/cart/handleCartCountDisplay.js";
 
 function router() {
   const { pathname } = window.location;
-
-  console.log(pathname);
 
   switch (pathname) {
     case "/":
@@ -19,29 +18,17 @@ function router() {
     case "/productDetails.html":
       displayProductByID();
       break;
-      case "/checkout/checkout.html":
-        displayCart();
+    case "/about.html":
+    case "/contact.html":
+    case "/wishlist.html":
+    case "/productDetails.html":
+    case "/your_films.html":
+    case "/profile.html":
+      handleCartCountDisplay();
+      break;
+    case "/checkout/checkout.html":
+      displayCart();
   }
 }
 
 router();
-
-// IIFE
-// (function() {
-//     const { pathname } = window.location;
-
-//     console.log(pathname);
-
-//     switch (pathname) {
-//       case "/":
-//       case "/index.html":
-//         break;
-//       case "/js_testing.html":
-//         displayProducts();
-//         break;
-//       case "/productDetails.html":
-//         displayProductByID();
-//         break;
-//     }
-// })();
-// Immediately Invoked Function Expression example

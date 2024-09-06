@@ -3,8 +3,6 @@ import { isIdInCart } from "../../utils/cart.js";
 export function createProductHtmlByID(container, product) {
   container.innerHTML = "";
 
-  console.log("product", product);
-
   const { id, title, image, description, genre, rating, released, price } =
     product.data;
 

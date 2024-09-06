@@ -10,7 +10,6 @@ export function filterProducts(products) {
 
   function handleFilter(event) {
     const filterValue = event.target.value.trim().toLowerCase();
-    console.log(filterValue);
 
     const filterProducts = products.data.filter((product) => {
       if (
