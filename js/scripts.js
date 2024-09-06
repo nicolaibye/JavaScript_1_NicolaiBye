@@ -1,6 +1,7 @@
 import { displayProducts } from "./handlers/products/displayProducts.js";
 import { displayProductByID } from "./handlers/products/displayProductByID.js";
 import { displayCart } from "./handlers/cart/displayCart.js";
+import { displayProductsHome } from "./handlers/products/displayProductsHome.js";
 
 function router() {
   const { pathname } = window.location;
@@ -10,6 +11,7 @@ function router() {
   switch (pathname) {
     case "/":
     case "/index.html":
+      displayProductsHome();
       break;
     case "/library.html":
       displayProducts();

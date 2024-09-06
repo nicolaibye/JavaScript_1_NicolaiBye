@@ -1,4 +1,5 @@
 import { createProductsHtml } from "../../ui/posts/createProductsHtml.js";
+import { handleCartIconClick } from "../cart/handleCartIconClick.js";
 
 export function filterProducts(products) {
   const searchInput = document.querySelector("#your_films_search");
@@ -23,5 +24,6 @@ export function filterProducts(products) {
 
     let wrappedFilterProducts = { data: filterProducts };
     createProductsHtml(".library_films", wrappedFilterProducts);
+    handleCartIconClick();
   }
 }
