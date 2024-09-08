@@ -10,7 +10,9 @@ function router() {
   switch (pathname) {
     case "/":
     case "/index.html":
-      displayProductsHome();
+      displayProductsHome("#latest_blockbusters_container");
+      displayProductsHome("#indie_films_container");
+      displayProductsHome("#upcoming_films_container");
       break;
     case "/library.html":
       displayProducts();

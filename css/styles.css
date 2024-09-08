@@ -1645,6 +1645,15 @@ div.film_info_block ul li a:hover {
   .cart_amount {
     display: none;
   }
+
+  .cart_amount {
+    top: 225px;
+    right: inherit;
+    left: 130px;
+    background-color: #ff4773;
+    border: 0px;
+    color: #ffffff;
+  }
 }
 
 /* Mobile */

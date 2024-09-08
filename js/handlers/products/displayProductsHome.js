@@ -23,7 +23,3 @@ export async function displayProductsHome(container) {
       await displayMessage(parent, "error", error.message);
     }
   }
-
-  displayProductsHome("#latest_blockbusters_container");
-  displayProductsHome("#indie_films_container");
-  displayProductsHome("#upcoming_films_container");
