@@ -8,27 +8,27 @@ function router() {
   const { pathname } = window.location;
 
   switch (pathname) {
-    case "/":
-    case "/index.html":
+    case "/JavaScript_1_NicolaiBye/":
+    case "/JavaScript_1_NicolaiBye/index.html":
       displayProductsHome("#latest_blockbusters_container");
       displayProductsHome("#indie_films_container");
       displayProductsHome("#upcoming_films_container");
       break;
-    case "/library.html":
+    case "/JavaScript_1_NicolaiBye/library.html":
       displayProducts();
       break;
-    case "/productDetails.html":
+    case "/JavaScript_1_NicolaiBye/productDetails.html":
       displayProductByID();
       break;
-    case "/about.html":
-    case "/contact.html":
-    case "/wishlist.html":
-    case "/productDetails.html":
-    case "/your_films.html":
-    case "/profile.html":
+    case "/JavaScript_1_NicolaiBye/about.html":
+    case "/JavaScript_1_NicolaiBye/contact.html":
+    case "/JavaScript_1_NicolaiBye/wishlist.html":
+    case "/JavaScript_1_NicolaiBye/productDetails.html":
+    case "/JavaScript_1_NicolaiBye/your_films.html":
+    case "/JavaScript_1_NicolaiBye/profile.html":
       handleCartCountDisplay();
       break;
-    case "/checkout/checkout.html":
+    case "/JavaScript_1_NicolaiBye/checkout/checkout.html":
       displayCart();
   }
 }
